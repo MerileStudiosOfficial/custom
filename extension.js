@@ -76,6 +76,19 @@
                 }
               }
             };
+            
+        bot.commands.grillCommand = {
+            command: 'grill',  // The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', // Minimum user permission to use the command
+            type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+              functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                  API.sendChat("http://orig14.deviantart.net/2979/f/2009/097/8/c/tails_in_a_dress_o_o_by_lottelemmers.jpg");
+                }
+              }
+            };
 
 
         // Load the chat package again to account for any changes
