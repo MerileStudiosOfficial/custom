@@ -102,6 +102,32 @@
                 }
               }
             };
+            
+        bot.commands.kltCommand = {
+            command: 'nerd',  // The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', // Minimum user permission to use the command
+            type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+              functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                  API.sendChat("http://i.imgur.com/eaC8M40.jpg");
+                }
+              }
+            };
+            
+        bot.commands.kitsuneCommand = {
+            command: 'killlatails',  // The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', // Minimum user permission to use the command
+            type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+              functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                  API.sendChat("http://orig02.deviantart.net/88c7/f/2012/115/c/7/rick_dress_by_unbreakablebond-d4xk5hs.jpg");
+                }
+              }
+            };
 
 
         // Load the chat package again to account for any changes
