@@ -1,7 +1,7 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "bscBot";
+    var fork = "MerileStudiosOfficial";
 
     // Define our function responsible for extending the bot.
     function extend() {
@@ -25,18 +25,58 @@
         }
 
         // Example code for a bot command:
-        bot.commands.baconCommand = {
-            command: 'bacon',  // The command to be called. With the standard command literal this would be: !bacon
+        bot.commands.ryukoCommand = {
+            command: 'ryuko',  // The command to be called. With the standard command literal this would be: !bacon
             rank: 'user', // Minimum user permission to use the command
             type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
               functionality: function (chat, cmd) {
                 if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                 if (!bot.commands.executable(this.rank, chat)) return void (0);
                 else {
-                  API.sendChat("/me Bacon!!!");
+                  API.sendChat("https://33.media.tumblr.com/a6acee846f7f64f54b2ee0f9ef5c6321/tumblr_n9vz4p20qG1r32an8o1_500.gif");
                 }
               }
             };
+            
+        bot.commands.baconCommand = {
+            command: 'leone',  // The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', // Minimum user permission to use the command
+            type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+              functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                  API.sendChat("http://data.whicdn.com/images/148927367/large.gif");
+                }
+              }
+            };
+            
+        bot.commands.aboosCommand = {
+            command: 'aboos',  // The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', // Minimum user permission to use the command
+            type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+              functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                  API.sendChat("http://i.imgur.com/dALhxat.gif");
+                }
+              }
+            };
+            
+        bot.commands.tailsCommand = {
+            command: 'tails',  // The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', // Minimum user permission to use the command
+            type: 'exact', // Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+              functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                  API.sendChat("http://mixingthetracks.com/gallery/f6efc0bb80dcfeda64de5b62bcdb4c3a_90x90.gif");
+                }
+              }
+            };
+
 
         // Load the chat package again to account for any changes
         bot.loadChat();
@@ -46,34 +86,34 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-      botName: "basicBot",
+      botName: "Ryoku ~<3",
       language: "english",
       chatLink: "https://rawgit.com/bscBot/source/master/lang/en.json",
       scriptLink: "https://rawgit.com/bscBot/source/master/basicBot.js",
       roomLock: false, // Requires an extension to re-load the script
       startupCap: 1, // 1-200
       startupVolume: 0, // 0-100
-      startupEmoji: false, // true or false
-      autowoot: true,
+      startupEmoji: true, // true or false
+      autowoot: false,
       autoskip: false,
-      smartSkip: true,
+      smartSkip: false,
       cmdDeletion: true,
       maximumAfk: 120,
-      afkRemoval: true,
+      afkRemoval: false,
       maximumDc: 60,
       bouncerPlus: true,
-      blacklistEnabled: true,
+      blacklistEnabled: false,
       lockdownEnabled: false,
       lockGuard: false,
       maximumLocktime: 10,
-      cycleGuard: true,
+      cycleGuard: false,
       maximumCycletime: 10,
       voteSkip: false,
       voteSkipLimit: 10,
       historySkip: false,
-      timeGuard: true,
+      timeGuard: false,
       maximumSongLength: 10,
-      autodisable: true,
+      autodisable: false,
       commandCooldown: 30,
       usercommandsEnabled: true,
       skipPosition: 3,
@@ -91,7 +131,7 @@
       motdEnabled: false,
       motdInterval: 5,
       motd: "Temporary Message of the Day",
-      filterChat: true,
+      filterChat: false,
       etaRestriction: false,
       welcome: true,
       opLink: null,
