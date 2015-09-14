@@ -86,7 +86,7 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-      botName: "Ryoku ~<3",
+      botName: "Ryuko ~<3",
       language: "english",
       chatLink: "https://rawgit.com/bscBot/source/master/lang/en.json",
       scriptLink: "https://rawgit.com/bscBot/source/master/basicBot.js",
@@ -97,7 +97,7 @@
       autowoot: false,
       autoskip: false,
       smartSkip: false,
-      cmdDeletion: true,
+      cmdDeletion: false,
       maximumAfk: 120,
       afkRemoval: false,
       maximumDc: 60,
